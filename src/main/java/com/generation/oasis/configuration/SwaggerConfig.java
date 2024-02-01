@@ -14,27 +14,25 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
 public class SwaggerConfig {
-
 	@Bean
     OpenAPI springOasisOpenAPI() {
         return new OpenAPI()
             .info(new Info()
-                .title("Oasis")
-                .description("Projeto Integrador - Generation Brasil")
+                .title("Ecommerce Oasis")
+                .description("Este é um projeto integrador desenvolvido como parte do curso de Java React, focado na criação de um E-commerce voltado para a promoção da Agricultura Sustentável e o combate à Fome.")
                 .version("v0.0.1")
                 .license(new License()
-                    .name("Oasis")
-                    .url("https://brazil.generation.org/"))
+                    .name("Anderson Morais - Fernanda Sasso - Flávia Paião - Guilherme Abreu - Isabella Alburquerque - Lauane Gonçalves - Rafael Seiji")
+                    .url("https://github.com/Oasis05"))
                 .contact(new Contact()
-                    .name("Generation Brasil")
+                    .name("Anderson Morais - Fernanda Sasso - Flávia Paião - Guilherme Abreu - Isabella Alburquerque - Lauane Gonçalves - Rafael Seiji")
                     .url("https://github.com/Oasis05/OASIS")
                     .email("ecommerceoasis.gp5@gmail.com")))
             .externalDocs(new ExternalDocumentation()
                 .description("Github")
-                .url("https://github.com/Oasis05/OASIS"));
+                .url("https://github.com/Oasis05/OASIS/"));
     }
-
-
+	
 	@Bean
 	OpenApiCustomizer customerGlobalHeaderOpenApiCustomiser() {
 
@@ -57,8 +55,7 @@ public class SwaggerConfig {
 	}
 
 	private ApiResponse createApiResponse(String message) {
-
+		
 		return new ApiResponse().description(message);
-
 	}
 }
