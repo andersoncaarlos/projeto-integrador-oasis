@@ -29,6 +29,8 @@ public class Usuario {
 	@NotBlank (message = "O atributo senha é obrigatório")
 	private String senha;
 	
+	private String tipo;
+	
 	private String foto;
 	
 	@OneToMany (fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
@@ -80,6 +82,14 @@ public class Usuario {
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	
 }
