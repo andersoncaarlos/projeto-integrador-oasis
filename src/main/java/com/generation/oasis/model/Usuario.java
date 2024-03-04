@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table (name = "tb_usuario")
@@ -28,6 +29,9 @@ public class Usuario {
 	
 	@NotBlank (message = "O atributo senha é obrigatório")
 	private String senha;
+	
+	@NotNull (message = "O atributo tipo é obrigatório")
+	private Integer tipo;
 	
 	private String foto;
 	
@@ -80,6 +84,14 @@ public class Usuario {
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
+	}
+
+	public Integer getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Integer tipo) {
+		this.tipo = tipo;
 	}
 	
 }
