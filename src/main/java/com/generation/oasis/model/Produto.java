@@ -27,7 +27,7 @@ public class Produto {
 	@NotBlank (message = "O atributo nome é obrigatório")
 	private String nome;	
 	
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "UTC")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date dataValidade;
 	
 	@NotNull (message = "O atributo quantidade é obrigatório")
